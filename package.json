@@ -1,0 +1,11 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "Web data Project-2 on Heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodejs index.js"
+  },
+  "author": "Manu",
+  "license": "ISC"
+}
