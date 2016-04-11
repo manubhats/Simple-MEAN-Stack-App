@@ -4,8 +4,18 @@
   "description": "Web data Project-2 on Heroku",
   "main": "index.js",
   "scripts": {
-    "test": "nodejs index.js"
+    "start": "node index.js"
   },
   "author": "Manu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.4",
+    "ejs": "2.3.3",
+    "cors": "^2.7.1"
+  },
+  "devDependencies": {
+    "cors": "^2.7.1"
+  }
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+	<html ng-app="myApp">
+		<head>
+			<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		</head>
+		<body>
+
+		    <div class="container" ng-controller="AppCtrl1">
+		 
+		      <h1>	WEB APP UNDER CONSTRUCTION!!
+		      		<h4>A simple web application using MEAN Stack to display details about English movies</h4>
+		      		<h5>Click the Start button to start learning about mies</h5> 
+		      		<img src="http://i922.photobucket.com/albums/ad64/BLdw/simpsons-movie-hammer.jpg" align="middle">
+		      </h1>
+		      
+		      
+		      <button ng-click="update()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">START</span></button>
+		      
+		      <button ng-click="killtimer()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">STOP</span></button>
+		  
+			    <br><br><b></b><br>
+		  
+		      <div ng-repeat="m in mov">
+		      	<table  class="table">
+			      <tr><td><img ng-src="{{m.fields.image_url}}" alt="poster" height="200" width="150"></td>
+			    	<td>
+				    	<ul>
+					      <li><b>Title:</b>{{m.fields.title}}</li>
+					      <li><b>IMDB Rating: </b>{{m.fields.rating}}</li>
+					      <li><b>Release Year:</b>{{m.fields.year}}</li>
+					      <li><b>Rank:</b>{{m.fields.rank}}</li>
+					      <li ng-repeat="director in m.fields.directors" ><b>Director:</b>{{director}}</li></ul>
+			    		<table>
+		      				<tr><b>Actors:</b></tr>
+		      				<td ng-repeat="actors in m.fields.actors" >{{actors}}&nbsp&nbsp&nbsp </td> 
+		      			</table>
+		      		</td>
+		     	</table>
+		      
+		      </div>	      
+		    </div>
+		
+		  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+	      <script src="/controllers/controller.js"></script>     
+
+		</body>
+</html>
+
