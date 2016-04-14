@@ -15,7 +15,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost/movieDB', 
+mongoose.connect('mongodb://manu:manubhat@ds023540.mlab.com:23540/heroku_c9qlr3x8', 
 	function(err) {
     if(err) {
         console.log('connection error', err);
