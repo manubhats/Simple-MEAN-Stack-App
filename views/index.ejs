@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 	<html ng-app="myApp">
 		<head>
+		<!-- <link rel="stylesheet" href="/controllers/styles.css">
+ -->
 			<!-- Latest compiled and minified CSS -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -9,24 +11,24 @@
 		</head>
 		<body>
 
-		    <div class="container" ng-controller="AppCtrl1">
-		 
-		      <h1>	WEB APP UNDER CONSTRUCTION!!
+		    <div class="container" ng-controller="AppCtrl1" >
+		 	<p>
+		      <h1 id="div1">	Movie Finder
 		      		<h4>A simple web application using MEAN Stack to display details about English movies</h4>
-		      		<h5>Click the Start button to start learning about mies</h5> 
-		      		<img src="http://i922.photobucket.com/albums/ad64/BLdw/simpsons-movie-hammer.jpg" align="middle">
+		      		<h5>Click the Start button to start learning about movies</h5> 
+		      		
 		      </h1>
-		      
+		      </p>
 		      
 		      <button ng-click="update()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">START</span></button>
 		      
-		      <button ng-click="killtimer()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">STOP</span></button>
+		      <button ng-click="killtimer()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">PAUSE</span></button>
 		  
 			    <br><br><b></b><br>
 		  
 		      <div ng-repeat="m in mov">
 		      	<table  class="table">
-			      <tr><td><img ng-src="{{m.fields.image_url}}" alt="poster" height="200" width="150"></td>
+			      <tr><td><img ng-src="{{url}}" alt="poster" height="200" width="150"></td>
 			    	<td>
 				    	<ul>
 					      <li><b>Title:</b>{{m.fields.title}}</li>
