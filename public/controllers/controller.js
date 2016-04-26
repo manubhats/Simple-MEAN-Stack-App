@@ -2,6 +2,7 @@ var app=angular.module('myApp',['ngAnimate']);
 
 //AngularJS controller
 var rank = 0;
+var count = 0;
 app.controller("AppCtrl1",function($scope,$http,$interval)
 {
 	var timer;
@@ -10,7 +11,8 @@ app.controller("AppCtrl1",function($scope,$http,$interval)
 	{
 			timer = $interval(function()
 			{
-				refreshMe();	
+				refreshMe();
+				count +=1;	
 			},500);
 	};
 	
@@ -32,6 +34,7 @@ app.controller("AppCtrl1",function($scope,$http,$interval)
 			var url1 = 'https:'+res[1];
 		 	$scope.mov=response;
 		 	$scope.url=url1;
+		 	$scope.count = count;
 		 	rank = response[0].fields.rank;
 	 	});
 	}
