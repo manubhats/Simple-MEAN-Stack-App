@@ -19,7 +19,7 @@ The hardest part of the implementation was sending a different query to the NoSQ
 ##### If you were to use these technologies professionally, what would be your biggest concern?  
 My biggest concern would be the learning curve for new technologies like AngularJS and its ever evolving classes. The libraries that we use today may be deprecated tomorrow. So, staying upto date with these technologies and using them approriately is difficult. 
 
-## Running and Deploying on Heroku
+## Running the App
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
 ```sh
