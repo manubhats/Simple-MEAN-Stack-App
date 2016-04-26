@@ -1,6 +1,7 @@
 # Movie Finder
 
 [Heroku link to my application](http://cse5335-mxs1773-2.herokuapp.com/)
+[Dataset can be found here](https://aws.amazon.com/developertools/9131774809784850)
 
 A simple web application using MEAN Stack to display details about English movies.
 
