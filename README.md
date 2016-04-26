@@ -1,5 +1,7 @@
 # Movie Finder
 
+[Heroku link to my application](http://cse5335-mxs1773-2.herokuapp.com/)
+
 A simple web application using MEAN Stack to display details about English movies.
 
 Technology Stack:
