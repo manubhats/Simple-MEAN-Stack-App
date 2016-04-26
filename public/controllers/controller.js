@@ -11,7 +11,7 @@ app.controller("AppCtrl1",function($scope,$http,$interval)
 			timer = $interval(function()
 			{
 				refreshMe();	
-			},1000);
+			},500);
 	};
 	
 	$scope.killtimer=function()
@@ -30,12 +30,8 @@ app.controller("AppCtrl1",function($scope,$http,$interval)
 			var url = response[0].fields.image_url;
 			var res = url.split(":");
 			var url1 = 'https:'+res[1];
-
 		 	$scope.mov=response;
 		 	$scope.url=url1;
-
-		 	console.log(response);
-		 	console.log(url1);
 		 	rank = response[0].fields.rank;
 	 	});
 	}

@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 	<html ng-app="myApp">
 		<head>
-		<!-- <link rel="stylesheet" href="/controllers/styles.css">
- -->
+		<link rel="stylesheet" href="/controllers/styles.css">
+
 			<!-- Latest compiled and minified CSS -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 			<!-- Optional theme -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
 		</head>
 		<body>
 
 		    <div class="container" ng-controller="AppCtrl1" >
 		 	<p>
-		      <h1 id="div1">	Movie Finder
-		      		<h4>A simple web application using MEAN Stack to display details about English movies</h4>
+		      <h1 class="flash">	Movie Finder</h1>
+		      	<h4 class="flash">A simple web application using MEAN Stack to display details about English movies</h4>
 		      		<h5>Click the Start button to start learning about movies</h5> 
-		      		
-		      </h1>
 		      </p>
 		      
 		      <button ng-click="update()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">START</span></button>
 		      
 		      <button ng-click="killtimer()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">PAUSE</span></button>
-		  
+		  	
 			    <br><br><b></b><br>
 		  
-		      <div ng-repeat="m in mov">
+		      <div ng-repeat="m in mov" class="bounce">
 		      	<table  class="table">
-			      <tr><td><img ng-src="{{url}}" alt="poster" height="200" width="150"></td>
-			    	<td>
+			      <tr><td><img ng-src="{{url}}" alt="poster" height="300" width="250"></td>
+			    	<td><h3 class="flash">{{m.fields.title}}</h3>
 				    	<ul>
-					      <li><b>Title:</b>{{m.fields.title}}</li>
+					      <!-- <li ></li> -->
 					      <li><b>IMDB Rating: </b>{{m.fields.rating}}</li>
 					      <li><b>Release Year:</b>{{m.fields.year}}</li>
 					      <li><b>Rank:</b>{{m.fields.rank}}</li>
