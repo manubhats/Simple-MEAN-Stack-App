@@ -14,7 +14,7 @@ app.controller("AppCtrl1",function($scope,$http,$interval)
 			{
 				refreshMe();
 				count +=1;	
-			},500);
+			},2000);
 	};
 	
 	$scope.killtimer=function()
