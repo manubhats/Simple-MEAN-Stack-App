@@ -32,16 +32,16 @@ app.controller("AppCtrl1",function($scope,$http,$interval)
 		{		 	
 			var url = response[0].fields.image_url;
 			var res = url.split(":");
-			var url1 = 'https:'+res[1];
-
-			if(list.length > 19){
+			var secureUrl = 'https:'+res[1];
+			//Creating a list to store 20 records at a time
+			if(list.length > 20){
 				list.shift();
 			}
 			list.push(response);
-			$scope.list = list;
-
+			//Setting the scope with all the required values to access in div
+			$scope.list = list.reverse();
 		 	$scope.mov=response;
-		 	$scope.url=url1;
+		 	$scope.url=secureUrl;
 		 	$scope.count = count;
 		 	rank = response[0].fields.rank;
 	 	});
