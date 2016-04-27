@@ -18,20 +18,20 @@
 		      	<h4>A simple web application using MEAN Stack to display details about English movies</h4>
 		      		<h5>Click the Start button to start learning about movies</h5> 
 		      		<ul>
-		      		<li>After the number of records on the page reaches 20, they are cleared and replaced with new incoming records. </li>
+		      		<li>After the number of records on the page reaches 20, they older records are replaced with new incoming records. </li>
 		      		<li>Animation applied to incoming requests.</li>
 		      		</ul>
 		      		<h4 class="flash">Movie Count(# of AJAX requests) = {{count}}</h4>
 		      </p>
 		      
-		      <button ng-click="update()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">START</span></button>
-		      
+		      <button ng-click="update()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">START</span></button> &nbsp &nbsp &nbsp
+ 		      
 		      <button ng-click="killtimer()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">PAUSE</span></button>
 		  	
 			    <br/><br/><br/>
 		  
 
-		      <div ng-repeat="m in mov" class="bounce">
+		      <div ng-repeat="m in mov" class="mymove">
 		      	<table  class="table">
 			      <tr><td><img ng-src="{{url}}" alt="pclass="flash"oster" height="300" width="250"></td>
 			    	<td><h3 class="flash">{{m.fields.title}}</h3>

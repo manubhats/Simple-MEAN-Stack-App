@@ -35,7 +35,7 @@ app.controller("AppCtrl1",function($scope,$http,$interval)
 			var url1 = 'https:'+res[1];
 
 			if(list.length > 19){
-				list = [];
+				list.shift();
 			}
 			list.push(response);
 			$scope.list = list;

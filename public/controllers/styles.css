@@ -10,7 +10,7 @@
     -webkit-animation-timing-function:ease-in-out;
     -webkit-animation-direction: alternate;
 }
-
+/*
 .bounce {
     animation: bounce 1s infinite;
     -webkit-animation: bounce 1s infinite;
@@ -28,4 +28,22 @@
     0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
     40% {-moz-transform: translateY(-30px);}
     60% {-moz-transform: translateY(-15px);}
-}s
+}*/
+
+.mymove {
+    animation: bounceIn 0.75s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+/*  60% {
+    transform: scale(0.65);
+    opacity: 1;
+  }*/
+  100% {
+    transform: scale(1);
+  }
+}
