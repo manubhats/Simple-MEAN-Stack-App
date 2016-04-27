@@ -14,9 +14,13 @@
 
 		    <div class="container" ng-controller="AppCtrl1" >
 		 	<p>
-		      <h1 class="flash">	Movie Finder</h1>
+		      <h1 class="flash">CSE 5335 Project-2 : Movie Finder</h1>
 		      	<h4>A simple web application using MEAN Stack to display details about English movies</h4>
 		      		<h5>Click the Start button to start learning about movies</h5> 
+		      		<ul>
+		      		<li>After the number of records on the page reaches 20, they are cleared and replaced with new incoming records. </li>
+		      		<li>Animation applied to incoming requests.</li>
+		      		</ul>
 		      		<h4 class="flash">Movie Count(# of AJAX requests) = {{count}}</h4>
 		      </p>
 		      
@@ -24,18 +28,20 @@
 		      
 		      <button ng-click="killtimer()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash">PAUSE</span></button>
 		  	
-			    <br><br><b></b><br>
+			    <br/><br/><br/>
 		  
+
 		      <div ng-repeat="m in mov" class="bounce">
 		      	<table  class="table">
-			      <tr><td><img ng-src="{{url}}" alt="poster" height="300" width="250"></td>
+			      <tr><td><img ng-src="{{url}}" alt="pclass="flash"oster" height="300" width="250"></td>
 			    	<td><h3 class="flash">{{m.fields.title}}</h3>
 				    	<ul>
 					      <!-- <li ></li> -->
 					      <li><b>IMDB Rating: </b>{{m.fields.rating}}</li>
 					      <li><b>Release Year:</b>{{m.fields.year}}</li>
 					      <li><b>Rank:</b>{{m.fields.rank}}</li>
-					      <li ng-repeat="director in m.fields.directors" ><b>Director:</b>{{director}}</li></ul>
+					      <li ng-repeat="director in m.fields.directors" ><b>Director:</b>{{director}}</li>
+					      </ul>
 			    		<table>
 		      				<tr><b>Actors:</b></tr>
 		      				<td ng-repeat="actors in m.fields.actors" >{{actors}}&nbsp&nbsp&nbsp </td> 
@@ -43,9 +49,29 @@
 		      		</td>
 		     	</table>
 		      
-		      </div>	      
+		      </div>	
+		      <div ng-repeat="lst in list">
+		      <div ng-repeat="l in lst">
+		      <table  class="table">
+			      
+			    	<td><h3 class="flash">{{l.fields.title}}</h3>
+				    	<ul>
+					      <!-- <li ></li> -->
+					      <li><b>IMDB Rating: </b>{{l.fields.rating}}</li>
+					      <li><b>Release Year:</b>{{l.fields.year}}</li>
+					      <li><b>Rank:</b>{{m.fields.rank}}</li>
+					      <li ng-repeat="director in l.fields.directors" ><b>Director:</b>{{director}}</li>
+					      </ul>
+			    		<table>
+		      				<tr><b>Actors:</b></tr>
+		      				<td ng-repeat="actors in l.fields.actors" >{{actors}}&nbsp&nbsp&nbsp </td> 
+		      			</table>
+		      		</td>
+		     	</table>
+		      	
+		      </div>      
 		    </div>
-		
+		</div>
 		  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
 	      <script src="/controllers/controller.js"></script>     

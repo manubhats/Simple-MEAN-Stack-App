@@ -3,6 +3,7 @@ var app=angular.module('myApp',['ngAnimate']);
 //AngularJS controller
 var rank = 0;
 var count = 0;
+var list = [];
 app.controller("AppCtrl1",function($scope,$http,$interval)
 {
 	var timer;
@@ -32,6 +33,13 @@ app.controller("AppCtrl1",function($scope,$http,$interval)
 			var url = response[0].fields.image_url;
 			var res = url.split(":");
 			var url1 = 'https:'+res[1];
+
+			if(list.length > 20){
+				list = [];
+			}
+			list.push(response);
+			$scope.list = list;
+			
 		 	$scope.mov=response;
 		 	$scope.url=url1;
 		 	$scope.count = count;
