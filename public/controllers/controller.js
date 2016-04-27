@@ -34,12 +34,12 @@ app.controller("AppCtrl1",function($scope,$http,$interval)
 			var res = url.split(":");
 			var url1 = 'https:'+res[1];
 
-			if(list.length > 20){
+			if(list.length > 19){
 				list = [];
 			}
 			list.push(response);
 			$scope.list = list;
-			
+
 		 	$scope.mov=response;
 		 	$scope.url=url1;
 		 	$scope.count = count;
